@@ -1,0 +1,41 @@
+weight= 100
+
+#Ground shipping
+ground_Prem=125.00
+if weight <=2:
+  cost=weight*1.50+20.00
+  print("Cost of Shipping Package: ",cost," $")
+elif 2<weight<=6:
+  cost=weight*3.00+20.00
+  print("Cost of Shipping Package: ",cost," $")
+elif 6<weight<=10:
+  cost=weight*4.00+20.00
+  print("Cost of Shipping Package: ",cost," $")
+elif weight>10:
+  cost=weight*4.75+20.00
+  print("Cost of Shipping Package: ",cost," $")
+
+print ("Cost of Ground Shipping Premium: ",ground_Prem," $")
+
+#Drone Shipping
+if weight <=2:
+  cost_D=weight*4.50
+  print("Cost of Drone Package: ",cost_D," $")
+elif 2<weight<=6:
+  cost_D=weight*9.00
+  print("Cost of Drone Package: ",cost_D," $")
+elif 6<weight<=10:
+  cost_D=weight*12.00
+  print("Cost of Drone Package: ",cost_D," $")
+elif weight>10:
+  cost_D=weight*14.25
+  print("Cost of Drone Package: ",cost_D," $")
+
+if cost_D>cost:
+  print ("The chepeast solution is Ground Shipping: ",cost," $")
+elif cost_D<cost:
+  print("The chepeast solution is Drone Shipping: ",cost_D," $")
+else:
+  print ("Same price. You can choose",cost," $ ",cost_D," $")
+if cost>125 and cost>125:
+  print("You can choose the Premium Package",ground_Prem," $" )
